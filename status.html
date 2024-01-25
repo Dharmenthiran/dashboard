@@ -1,0 +1,59 @@
+{% block content %}
+    <div class="row mt-3"> <!-- Add a top margin to create space -->
+        <!-- First Column -->
+        <div class="col">
+            <div class="col-md">
+                <div class="card text-center text-white nb-3" id="total-machine">
+                    <div class="card-header">
+                        <h5 class="card-title">Total Machines</h5>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">{{total_mechin}}</h3> <!-- Example content, replace with your actual data -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Column -->
+        <div class="col">
+            <div class="col-md">
+                <div class="card text-center text-white nb-3" id="mechine-on">
+                    <div class="card-header">
+                        <h5 class="card-title">Machines On</h5>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">{{mechins_on}}</h3> <!-- Example content, replace with your actual data -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Column -->
+        <div class="col">
+            <div class="col-md">
+                <div class="card text-center text-white nb-3" id="mechine-off">
+                    <div class="card-header">
+                        <h5 class="card-title">Machines Off</h5>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">{{mechins_off}}</h3> <!-- Example content, replace with your actual data -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!--        fourth colomn-->
+        <div class="col">
+            <div class="col-md">
+                <div class="card text-center text-white nb-3" id="mechine-outoff_service">
+                    <div class="card-header">
+                        <h5 class="card-title">Machines Outoff Service</h5>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">{{mechins_outof}}</h3> <!-- Example content, replace with your actual data -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

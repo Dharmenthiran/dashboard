@@ -1,0 +1,44 @@
+#logo {
+  /* Your logo styles here */
+}
+
+body {
+  background-color: #ebeff5;
+}
+
+#total-machine {
+  background-color: #4cb4c7;
+}
+
+#mechine-on {
+  background-color: #7abecc;
+}
+
+#mechine-off {
+  background-color: #7cd1c0;
+}
+
+#mechine-outoff_service {
+  background-color: #4cb4c7;
+}
+
+/* Styles for the login form */
+body.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}

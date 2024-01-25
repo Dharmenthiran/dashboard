@@ -1,0 +1,20 @@
+{% extends 'Board/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="container">
+  <form action="" method="POST">
+
+        {% csrf_token %}
+
+        <div class="mb-3">
+            {{ form.as_p }}
+        </div>
+
+        <br>
+
+        <button type="submit" class="btn btn-primary" href="{% url 'Home' %}">Submit</button>
+    </form>
+</div>
+{% endblock %}

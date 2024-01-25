@@ -1,0 +1,66 @@
+{% extends 'Board/base.html' %}
+
+{% block content %}
+    <div class="row">
+        {% include 'Board/status.html' %}
+        <div class="col-md-6">
+            <h5>MECHINES:</h5>
+            <hr>
+            <div class="card card-body">
+                <a class="btn btn-dark btn-sm btn-block" href="{% url 'create_Mechine' %}">Create Mechine</a>
+               <form method="post" action="{% url 'update_delete_Mechine' %}">
+    {% csrf_token %}
+                    <table class="table table-sm">
+                        <br>
+                        <button type="submit" class="btn btn-sm btn-info" name="action" value="update" >Update Selected</button>
+
+                        <button type="submit" class="btn btn-sm btn-danger" name="action" value="delete">Delete Selected</button>
+                        <br>
+                        <tr>
+                            <th>Select</th>
+                            <th>Mechine</th>
+                            <th>ID</th>
+                            <th>Manufactured Date</th>
+                        </tr>
+                        {% for mechin in mechins %}
+                            <tr>
+                                <td>
+                                   <input type="checkbox" name="selected_mechins" value="{{ mechin.mechin_id }}">
+
+                                </td>
+
+                                <td>{{ mechin.name }}</td>
+                                <td>{{ mechin.mechin_id }}</td>
+                                <td>{{ mechin.created_at }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h5>LAST DAY:</h5>
+            <hr>
+            <div class="card card-body">
+                <a class="btn btn-dark btn-sm btn-block" href="">Runned-Mechine</a>
+                <table class="table table-sm">
+                    <tr>
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>Status</th>
+
+                    </tr>
+                    {% for mechin in runned %}
+                        <tr>
+                             <td>{{ mechin.mechine.mechin_id }}</td>
+                            <td>{{mechin.Date}}</td>
+                            <td>{{mechin.status}}</td>
+
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'Board/base.html' %}
+
+{% block content %}
+<div class="row h-100">
+    <div class="col h-100">
+        <h5>MECHINES:</h5>
+        <hr>
+        <div class="card card-body h-100">
+            <a class="btn btn-dark btn-sm btn-block" href="">Runned Mechines</a>
+            <table class="table table-sm">
+                <tr>
+                    <th>Mechine</th>
+                    <th>ID</th>
+                    <th>Manufactured Date</th>
+                    <th>On_Time</th>
+                    <th>Off_Time</th>
+                </tr>
+                {% for mechin in rumechin %}
+                    <tr>
+                        <td>{{ mechin.mechine.name }}</td>
+                        <td>{{ mechin.mechine.mechin_id }}</td>
+                        <td>{{ mechin.mechine.created_at }}</td>
+                        <td>{{ mechin.on_time }}</td>
+                        <td>{{ mechin.off_time }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

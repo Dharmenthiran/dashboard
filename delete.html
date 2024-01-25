@@ -1,0 +1,18 @@
+{% extends 'Board/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card card-body">
+            <p>Are you sure to delete {{mechin}}</p>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <a class="btn btn-warning" href="{% url 'Home' %}">Cancel</a>
+                <button type="submit" name="confirm" class="btn btn-danger">Confirm</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
